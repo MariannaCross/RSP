@@ -7,18 +7,26 @@
 
 //rock,paper,scissors;
 //rock='smash',paper='blind',scissors='slice';
+//trying to look through an array
+//const fight= ["smash","blind","slice"];
+  //  console.log(fight.length)
+   //for(i = Math.floor(Math.random()*3); i < fight.length;i++){
+     //   if (fight[0]="smash") {
+       //     console.log("Smash! Rock Smash!")
+        //}
+        //else if (fight[1]="blind") {
+          //  console.log("Blind! Paper Blind!")
+        //}
+       // else if (fight [2]="slice") {
+        //    console.log("Slice! Scissor Slice!")
+       // }
+   //}
 
-const sourceArray= ["smash","blind","slice"];
-sourceArray.forEach(consoleItem);
-function consoleItem (item, index, arr) {
-    console.log(item);
-}
+const fightArray= ["rock","scissors","paper"];
+const getComputerChoice= fightArray[Math.floor(Math.random()*fightArray.length)];
+console.log(getComputerChoice);
 
 
-
-//function getComputerChoice() {
-//    (Math.floor(Math.random()*3));
-//}
 
 //
 
