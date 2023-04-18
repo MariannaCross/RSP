@@ -8,5 +8,23 @@ let rock,paper,scissors;
 rock='smash',paper='blind',scissors='slice';
 
 
+function getComputerChoice() {
 
+}
+
+prompt()// to get input from user
+
+function singleRound(playerSelection,computerSelection){
+    if playerSelection > computerSelection
+    "you win! ____ beats _____"
+    if else: "you lose. ___ beats ____."
+}
+
+function game(){
+    singleRound
+    singleRound
+    singleRound
+    singleRound
+    singleRound
+}
 
