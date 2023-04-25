@@ -5,6 +5,7 @@ const getComputerChoice = () => {return fight[Math.floor(Math.random()*fight.len
 }
 //return is implicit in arrow function, but I'm having trouble with game function, so I changed this.
 function singleRound(playerSelection, computerChoice) {
+    playerSelection = playerSelection.toLowerCase();// make player input case insensitive
     console.log(`Player Selection: ${playerSelection}`);
     console.log(`Computer Choice: ${computerChoice}`);
     if (playerSelection === computerChoice) {
