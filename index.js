@@ -9,17 +9,17 @@ function singleRound(playerSelection, computerChoice) {
     console.log(`Computer Choice: ${computerChoice}`);
     if (playerSelection === computerChoice) {
       console.log("It's a tie!");
-      return `tie`;
+      return 'tie';
     } else if (
       (playerSelection === "rock" && computerChoice === "scissors")||
       (playerSelection === "scissors" && computerChoice === "paper")||
       (playerSelection === "paper" && computerChoice === "rock")
     ) {
       console.log("You win!");
-      return `win`
+      return 'win';
     } else {
       console.log("You lose!");
-      return `loss`;
+      return 'loss';
     }
   }
 //player and computer selections need to be consoled first in order to run through the function in the right way.
@@ -27,8 +27,8 @@ function singleRound(playerSelection, computerChoice) {
   const playerChoice= () => prompt("Brandish Your Weapon");
   const playerSelection = playerChoice()
 
-  singleRound(playerSelection,getComputerChoice());
-//play 5 times as Game function. 
+// removing singleRound(playerSelection,getComputerChoice());
+//play 5 times as Game function. Resetting the page to reset the promp keeps resetting the match array.
   function game (){
     let match = [];
    for (let i = 0; i < 5; i++) {
@@ -39,6 +39,8 @@ function singleRound(playerSelection, computerChoice) {
    }
    console.log(match);
   }
+
+game(); 
 
 
 
