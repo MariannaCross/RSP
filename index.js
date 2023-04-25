@@ -1,8 +1,9 @@
 
 const fight= ["rock","scissors","paper"];
 
-const getComputerChoice= () => fight[Math.floor(Math.random()*fight.length)];
-
+const getComputerChoice = () => {return fight[Math.floor(Math.random()*fight.length)];
+}
+//return is implicit in arrow function, but I'm having trouble with game function, so I changed this.
 function singleRound(playerSelection, computerChoice) {
     console.log(`Player Selection: ${playerSelection}`);
     console.log(`Computer Choice: ${computerChoice}`);
@@ -23,6 +24,13 @@ function singleRound(playerSelection, computerChoice) {
   const playerSelection = playerChoice()
 
   singleRound(playerSelection,getComputerChoice());
+  //play 5 times as Game function
+  function game (){
+   for (let i = 0; i < 5; i++) {
+    singleRound();
+   }
+  }
+
 
 
  
