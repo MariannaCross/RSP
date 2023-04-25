@@ -9,26 +9,35 @@ function singleRound(playerSelection, computerChoice) {
     console.log(`Computer Choice: ${computerChoice}`);
     if (playerSelection === computerChoice) {
       console.log("It's a tie!");
+      return `tie`;
     } else if (
       (playerSelection === "rock" && computerChoice === "scissors")||
       (playerSelection === "scissors" && computerChoice === "paper")||
       (playerSelection === "paper" && computerChoice === "rock")
     ) {
       console.log("You win!");
+      return `win`
     } else {
       console.log("You lose!");
+      return `loss`;
     }
   }
-  //player and computer selections need to be consoled first in order to run through the function in the right way.
+//player and computer selections need to be consoled first in order to run through the function in the right way.
+//return used to keep score
   const playerChoice= () => prompt("Brandish Your Weapon");
   const playerSelection = playerChoice()
 
   singleRound(playerSelection,getComputerChoice());
-  //play 5 times as Game function
+//play 5 times as Game function. 
   function game (){
+    let match = [];
    for (let i = 0; i < 5; i++) {
-    singleRound();
+    let playerSelection = playerChoice();
+    let computerChoice = getComputerChoice();
+    let result = singleRound(playerSelection,computerChoice);
+    match.push(result)
    }
+   console.log(match);
   }
 
 
